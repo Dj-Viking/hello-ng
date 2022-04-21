@@ -1,13 +1,16 @@
 .task {
-  background-color: grey;
-  padding: 10px;
-  width: 30%;
+  background: #f4f4f4;
+  margin: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
-.task-reminder {
-  border-left: blue solid 5px;
+.task.reminder {
+  background-color: rgb(136, 200, 255);
 }
 
-.task-text {
-  margin-right: 10px;
+.task h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

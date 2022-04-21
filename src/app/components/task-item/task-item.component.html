@@ -1,6 +1,6 @@
 <div
   class="task"
-  [ngClass]="{ 'task-reminder': task.reminder }"
+  [ngClass]="{ 'reminder': task.reminder }"
   [ngStyle]="{ 'margin': '1em', 'cursor': 'pointer' }"
   (click)="onToggle(task)"
 >
@@ -9,7 +9,7 @@
     {{ task.text }}
     <fa-icon
       (click)="onDelete(task)"
-      [ngStyle]="{'color': 'red', 'cursor': 'pointer'}"
+      [ngStyle]="{'color': 'red', 'cursor': 'pointer', 'margin-left': '0.5em'}"
       [icon]="faTimes"
     ></fa-icon>
   </span>

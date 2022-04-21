@@ -6,9 +6,9 @@ const tasks = []
 
 for (let i = 0; i < 7; i++) {
   tasks.push({
-    id: i,
+    id: i + 1,
     text: `something here ${Date.now()}`,
-    day: i.toString(),
+    day: (i + 1).toString(),
     reminder: i % 2 === 0 ? false : true
   });
 }
