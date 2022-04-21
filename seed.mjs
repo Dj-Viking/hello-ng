@@ -9,7 +9,7 @@ for (let i = 0; i < 7; i++) {
     id: i,
     text: `something here ${Date.now()}`,
     day: i.toString(),
-    reminder: true
+    reminder: i % 2 === 0 ? false : true
   });
 }
 db.tasks = tasks;
@@ -17,6 +17,6 @@ console.log("db now", db);
 
 fs.writeFile("./db.json", JSON.stringify(db, null, 2), {}, (err) => {
   if (err) throw err;
-  console.log(`\x1b[32m successfully seeded ${tasks.length} tasks into db.json! \x1b[00m`)
+  console.log(`\x1b[32m successfully seeded ${tasks.length} tasks into db.json! \x1b[00m`);
   process.exit(0);
 });

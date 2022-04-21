@@ -1,6 +1,11 @@
-<div [ngStyle]="{ 'margin': '1em' }">
+<div
+  class="task"
+  [ngClass]="{ 'task-reminder': task.reminder }"
+  [ngStyle]="{ 'margin': '1em' }"
+  (dblclick)="onToggle(task)"
+>
   <span>Day: {{ task.day }}</span>
-  <span>
+  <span class="task-text">
     {{ task.text }}
     <fa-icon
       (click)="onDelete(task)"

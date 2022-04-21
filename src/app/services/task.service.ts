@@ -24,4 +24,9 @@ export class TaskService {
         const delete_url = `${this.apiUrl}/${task.id}`;
         return this.http.delete<Task>(delete_url);
     }
+
+    toggleReminder(task: Task): Observable<Task> {
+        task.reminder = !task.reminder;
+        const toggle_url = `${this.apiUrl}${task.id}`
+    }
 }

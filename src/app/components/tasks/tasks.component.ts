@@ -21,12 +21,20 @@ export class TasksComponent implements OnInit {
             .subscribe((tasks) => this.tasks = tasks);
     }
 
+    // emitted the delete event from the inner component within the tasks component
+    // to then change the UI based on when the event is emitted and then 
+    // subscribe to the service delete task method for when the subscription
+    // exposes the result to the parent component
     deleteTask(task: Task): void {
         this.taskService
             .deleteTask(task)
             .subscribe(() => {
                 this.tasks = this.tasks.filter(t => t.id !== task.id);
             });
+    }
+
+    onToggle(task: Task): void {
+        this.onToggleReminder.emit(task);
     }
 
 }
