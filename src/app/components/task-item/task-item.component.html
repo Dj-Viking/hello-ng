@@ -3,6 +3,7 @@
   <span>
     {{ task.text }}
     <fa-icon
+      (click)="onDelete(task)"
       [ngStyle]="{'color': 'red', 'cursor': 'pointer'}"
       [icon]="faTimes"
     ></fa-icon>

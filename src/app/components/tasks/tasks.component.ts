@@ -16,7 +16,17 @@ export class TasksComponent implements OnInit {
         // whenever the service detects a change in the tasks array
         // sort of like a .then resolved promise callback
         // http client of angular returns an observable
-        this.taskService.getTasks().subscribe((tasks) => this.tasks = tasks);
+        this.taskService
+            .getTasks()
+            .subscribe((tasks) => this.tasks = tasks);
+    }
+
+    deleteTask(task: Task): void {
+        this.taskService
+            .deleteTask(task)
+            .subscribe(() => {
+                this.tasks = this.tasks.filter(t => t.id !== task.id);
+            });
     }
 
 }
