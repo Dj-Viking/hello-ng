@@ -1,0 +1,11 @@
+<div [ngStyle]="{ 'margin': '1em' }">
+  <span>Day: {{ task.day }}</span>
+  <span>
+    {{ task.text }}
+    <fa-icon
+      [ngStyle]="{'color': 'red', 'cursor': 'pointer'}"
+      [icon]="faTimes"
+    ></fa-icon>
+  </span>
+
+</div>
