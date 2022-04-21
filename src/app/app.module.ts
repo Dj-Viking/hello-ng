@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from "@angular/common/http";
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -25,7 +26,8 @@ import { AddTaskComponent } from './components/add-task/add-task.component';
         BrowserModule,
         AppRoutingModule,
         FontAwesomeModule,
-        HttpClientModule
+        HttpClientModule,
+        FormsModule
     ],
     //register dependencies (services)
     // create single instance of service class and passed as parameters

@@ -1,9 +1,11 @@
-<header>
-  <h1>{{title}}</h1>
+<header [ngStyle]="{'border': 'black solid 1px', 'border-radius': '10px', 'margin': '10%'}">
+  <div [ngStyle]="{'width': '80%', 'display': 'flex', 'justify-content': 'space-around', 'margin-top': '1em'}">
+    <h1>{{title}}</h1>
+    <app-button
+      color="green"
+      text="Add"
+    >
+    </app-button>
+  </div>
   <app-tasks></app-tasks>
-  <app-button
-    color="green"
-    text="Add Task"
-  >
-  </app-button>
 </header>

@@ -4,7 +4,7 @@
       "id": 1,
       "text": "something here 1650552186366",
       "day": "1",
-      "reminder": false
+      "reminder": true
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "id": 3,
       "text": "something here 1650552186366",
       "day": "3",
-      "reminder": false
+      "reminder": true
     },
     {
       "id": 4,
@@ -28,18 +28,12 @@
       "id": 5,
       "text": "something here 1650552186366",
       "day": "5",
-      "reminder": false
+      "reminder": true
     },
     {
       "id": 6,
       "text": "something here 1650552186366",
       "day": "6",
-      "reminder": false
-    },
-    {
-      "id": 7,
-      "text": "something here 1650552186366",
-      "day": "7",
       "reminder": false
     }
   ]

@@ -35,12 +35,21 @@ export class TasksComponent implements OnInit {
 
     //the child component is emitting an event to this parent
     // so that the parent can change one of it's dependencies 
+
+    //FIXME: if clicking the div which contains the delete button, should not toggle reminder to the server
+    // because the put request fails trying to update a task that got deleted
     toggleReminder(task: Task): void {
         task.reminder = !task.reminder;
         this.taskService
             .updateTaskReminder(task)
             .subscribe();
 
+    }
+
+    addTask(task: Task): void {
+        this.taskService
+            .addTask(task)
+            .subscribe((t) => this.tasks.push(t));
     }
 
 }
