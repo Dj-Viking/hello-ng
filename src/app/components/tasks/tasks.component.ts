@@ -33,8 +33,14 @@ export class TasksComponent implements OnInit {
             });
     }
 
-    onToggle(task: Task): void {
-        this.onToggleReminder.emit(task);
+    //the child component is emitting an event to this parent
+    // so that the parent can change one of it's dependencies 
+    toggleReminder(task: Task): void {
+        task.reminder = !task.reminder;
+        this.taskService
+            .updateTaskReminder(task)
+            .subscribe();
+
     }
 
 }

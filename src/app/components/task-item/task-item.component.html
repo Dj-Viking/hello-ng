@@ -1,8 +1,8 @@
 <div
   class="task"
   [ngClass]="{ 'task-reminder': task.reminder }"
-  [ngStyle]="{ 'margin': '1em' }"
-  (dblclick)="onToggle(task)"
+  [ngStyle]="{ 'margin': '1em', 'cursor': 'pointer' }"
+  (click)="onToggle(task)"
 >
   <span>Day: {{ task.day }}</span>
   <span class="task-text">
