@@ -14,8 +14,8 @@ export class UiService {
     constructor() { }
 
     // call this function when the element is clicked.
-    _toggleAddTask(): void {
-        console.log("kfdjfkdjk");
+    toggleAddTask(): void {
+        // console.log("kfdjfkdjk");
 
         this.showAddTask = !this.showAddTask;
         this.subject.next(this.showAddTask);

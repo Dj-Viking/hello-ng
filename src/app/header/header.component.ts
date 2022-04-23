@@ -7,6 +7,7 @@ import { Subscription } from 'rxjs';
     styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+
     title = "task tracker"
     showAddTask: boolean = false;
     subscription!: Subscription;
@@ -23,7 +24,7 @@ export class HeaderComponent implements OnInit {
     }
 
     toggleAddTask(): void {
-        this.uiService._toggleAddTask();
+        this.uiService.toggleAddTask();
     }
 
 }

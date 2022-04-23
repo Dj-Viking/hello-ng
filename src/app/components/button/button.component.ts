@@ -14,7 +14,7 @@ export class ButtonComponent implements OnInit {
     ngOnInit(): void {
     }
 
-    toggleAddTask() {
+    onClick(): void {
         this.btnClick.emit()
     }
 
